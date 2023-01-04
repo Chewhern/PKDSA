@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using BCASodium;
+using ASodium;
 
 namespace PKDSA_WinClient
 {
