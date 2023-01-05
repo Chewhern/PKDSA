@@ -42,6 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.RefreshBTN = new System.Windows.Forms.Button();
             this.ViewBTN = new System.Windows.Forms.Button();
+            this.FolderNameTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +116,7 @@
             this.KeyPairFolderNameCB.Name = "KeyPairFolderNameCB";
             this.KeyPairFolderNameCB.Size = new System.Drawing.Size(274, 28);
             this.KeyPairFolderNameCB.TabIndex = 4;
+            this.KeyPairFolderNameCB.SelectedIndexChanged += new System.EventHandler(this.KeyPairFolderNameCB_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -127,7 +130,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(461, 89);
+            this.label3.Location = new System.Drawing.Point(461, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 20);
             this.label3.TabIndex = 6;
@@ -135,7 +138,7 @@
             // 
             // PublicKeyTB
             // 
-            this.PublicKeyTB.Location = new System.Drawing.Point(461, 112);
+            this.PublicKeyTB.Location = new System.Drawing.Point(461, 204);
             this.PublicKeyTB.Multiline = true;
             this.PublicKeyTB.Name = "PublicKeyTB";
             this.PublicKeyTB.ReadOnly = true;
@@ -144,7 +147,7 @@
             // 
             // SignedPublicKeyTB
             // 
-            this.SignedPublicKeyTB.Location = new System.Drawing.Point(461, 234);
+            this.SignedPublicKeyTB.Location = new System.Drawing.Point(461, 302);
             this.SignedPublicKeyTB.Multiline = true;
             this.SignedPublicKeyTB.Name = "SignedPublicKeyTB";
             this.SignedPublicKeyTB.ReadOnly = true;
@@ -154,7 +157,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(461, 211);
+            this.label4.Location = new System.Drawing.Point(461, 279);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(268, 20);
             this.label4.TabIndex = 8;
@@ -172,7 +175,7 @@
             // 
             // ViewBTN
             // 
-            this.ViewBTN.Location = new System.Drawing.Point(461, 318);
+            this.ViewBTN.Location = new System.Drawing.Point(461, 386);
             this.ViewBTN.Name = "ViewBTN";
             this.ViewBTN.Size = new System.Drawing.Size(274, 50);
             this.ViewBTN.TabIndex = 11;
@@ -180,11 +183,31 @@
             this.ViewBTN.UseVisualStyleBackColor = true;
             this.ViewBTN.Click += new System.EventHandler(this.ViewBTN_Click);
             // 
+            // FolderNameTB
+            // 
+            this.FolderNameTB.Location = new System.Drawing.Point(461, 102);
+            this.FolderNameTB.Multiline = true;
+            this.FolderNameTB.Name = "FolderNameTB";
+            this.FolderNameTB.ReadOnly = true;
+            this.FolderNameTB.Size = new System.Drawing.Size(274, 67);
+            this.FolderNameTB.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(461, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(157, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Key pair\'s folder name";
+            // 
             // CreateSignatureKeyPair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FolderNameTB);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.ViewBTN);
             this.Controls.Add(this.RefreshBTN);
             this.Controls.Add(this.SignedPublicKeyTB);
@@ -224,5 +247,7 @@
         private Label label4;
         private Button RefreshBTN;
         private Button ViewBTN;
+        private TextBox FolderNameTB;
+        private Label label5;
     }
 }

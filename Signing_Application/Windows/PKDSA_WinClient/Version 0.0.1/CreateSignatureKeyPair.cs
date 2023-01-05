@@ -25,12 +25,20 @@ namespace PKDSA_WinClient
         private void CreateBTN_Click(object sender, EventArgs e)
         {
             String KeyPairFolderName = CryptographicSecureIDGenerator.GenerateUniqueString();
+            if (KeyPairFolderName.Length > 48) 
+            {
+                KeyPairFolderName = KeyPairFolderName.Substring(0, 48);
+            }
             RevampedKeyPair MyED25519KeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
             ED448RevampedKeyPair MyED448KeyPair = SecureED448.GenerateED448RevampedKeyPair();
             Byte[] SignedPublicKey = new Byte[] { };
             while (Directory.Exists(SignatureKeyPairRootFolder + KeyPairFolderName) == true) 
             {
                 KeyPairFolderName = CryptographicSecureIDGenerator.GenerateUniqueString();
+                if (KeyPairFolderName.Length > 48)
+                {
+                    KeyPairFolderName = KeyPairFolderName.Substring(0, 48);
+                }
             }
             Directory.CreateDirectory(SignatureKeyPairRootFolder + KeyPairFolderName);
             //Strongly secured elliptic curves which was highly tested by cryptographers and recommended by D.J.B
@@ -111,6 +119,14 @@ namespace PKDSA_WinClient
             }
             KeyPairFolderNameCB.Items.Clear();
             KeyPairFolderNameCB.Items.AddRange(KeyPairFolderNames);
+        }
+
+        private void KeyPairFolderNameCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (KeyPairFolderNameCB.SelectedIndex != -1) 
+            {
+                FolderNameTB.Text = KeyPairFolderNameCB.Text;
+            }
         }
     }
 }
