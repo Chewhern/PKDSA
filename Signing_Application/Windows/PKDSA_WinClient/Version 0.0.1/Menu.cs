@@ -43,5 +43,11 @@ namespace PKDSA_WinClient
                 Directory.CreateDirectory(Application.StartupPath + "\\Signatures_KeyPairs");
             }
         }
+
+        private void ChangeBTN_Click(object sender, EventArgs e)
+        {
+            ChangeSignatureKeyPair NewForm = new ChangeSignatureKeyPair();
+            NewForm.Show();
+        }
     }
 }

@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CurveTypeTB = new System.Windows.Forms.TextBox();
+            this.KeyPairFolderNameTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -74,10 +76,11 @@
             this.KeyPairFolderNameCB.Name = "KeyPairFolderNameCB";
             this.KeyPairFolderNameCB.Size = new System.Drawing.Size(274, 28);
             this.KeyPairFolderNameCB.TabIndex = 6;
+            this.KeyPairFolderNameCB.SelectedIndexChanged += new System.EventHandler(this.KeyPairFolderNameCB_SelectedIndexChanged);
             // 
             // RefreshBTN
             // 
-            this.RefreshBTN.Location = new System.Drawing.Point(11, 290);
+            this.RefreshBTN.Location = new System.Drawing.Point(11, 412);
             this.RefreshBTN.Name = "RefreshBTN";
             this.RefreshBTN.Size = new System.Drawing.Size(225, 50);
             this.RefreshBTN.TabIndex = 11;
@@ -87,7 +90,7 @@
             // 
             // SignBTN
             // 
-            this.SignBTN.Location = new System.Drawing.Point(11, 219);
+            this.SignBTN.Location = new System.Drawing.Point(11, 341);
             this.SignBTN.Name = "SignBTN";
             this.SignBTN.Size = new System.Drawing.Size(224, 49);
             this.SignBTN.TabIndex = 12;
@@ -130,11 +133,31 @@
             this.CurveTypeTB.Size = new System.Drawing.Size(224, 27);
             this.CurveTypeTB.TabIndex = 16;
             // 
+            // KeyPairFolderNameTB
+            // 
+            this.KeyPairFolderNameTB.Location = new System.Drawing.Point(10, 254);
+            this.KeyPairFolderNameTB.Multiline = true;
+            this.KeyPairFolderNameTB.Name = "KeyPairFolderNameTB";
+            this.KeyPairFolderNameTB.ReadOnly = true;
+            this.KeyPairFolderNameTB.Size = new System.Drawing.Size(225, 72);
+            this.KeyPairFolderNameTB.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 222);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(151, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Key Pair Folder Name";
+            // 
             // SignChallenge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 498);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.KeyPairFolderNameTB);
             this.Controls.Add(this.CurveTypeTB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SignedChallengeTB);
@@ -166,5 +189,7 @@
         private Label label3;
         private Label label4;
         private TextBox CurveTypeTB;
+        private TextBox KeyPairFolderNameTB;
+        private Label label5;
     }
 }

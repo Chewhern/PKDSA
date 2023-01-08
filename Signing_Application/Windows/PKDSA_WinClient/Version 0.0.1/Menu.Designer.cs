@@ -32,6 +32,7 @@
             this.CreateBTN = new System.Windows.Forms.Button();
             this.DeleteBTN = new System.Windows.Forms.Button();
             this.SignBTN = new System.Windows.Forms.Button();
+            this.ChangeBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,35 +51,46 @@
             this.CreateBTN.Name = "CreateBTN";
             this.CreateBTN.Size = new System.Drawing.Size(324, 67);
             this.CreateBTN.TabIndex = 1;
-            this.CreateBTN.Text = "Create Signature Key Pair\r\nOr View Signature Key Pair";
+            this.CreateBTN.Text = "1. Create Signature Key Pair\r\n2. View Signature Key Pair";
             this.CreateBTN.UseVisualStyleBackColor = true;
             this.CreateBTN.Click += new System.EventHandler(this.CreateBTN_Click);
             // 
             // DeleteBTN
             // 
-            this.DeleteBTN.Location = new System.Drawing.Point(244, 144);
+            this.DeleteBTN.Location = new System.Drawing.Point(244, 228);
             this.DeleteBTN.Name = "DeleteBTN";
             this.DeleteBTN.Size = new System.Drawing.Size(324, 67);
             this.DeleteBTN.TabIndex = 2;
-            this.DeleteBTN.Text = "Delete Signature Key Pair";
+            this.DeleteBTN.Text = "2. Delete Signature Key Pair";
             this.DeleteBTN.UseVisualStyleBackColor = true;
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // SignBTN
             // 
-            this.SignBTN.Location = new System.Drawing.Point(244, 238);
+            this.SignBTN.Location = new System.Drawing.Point(244, 315);
             this.SignBTN.Name = "SignBTN";
             this.SignBTN.Size = new System.Drawing.Size(324, 63);
             this.SignBTN.TabIndex = 3;
-            this.SignBTN.Text = "Sign Challenge";
+            this.SignBTN.Text = "2/3. Sign Challenge";
             this.SignBTN.UseVisualStyleBackColor = true;
             this.SignBTN.Click += new System.EventHandler(this.SignBTN_Click);
+            // 
+            // ChangeBTN
+            // 
+            this.ChangeBTN.Location = new System.Drawing.Point(244, 139);
+            this.ChangeBTN.Name = "ChangeBTN";
+            this.ChangeBTN.Size = new System.Drawing.Size(324, 67);
+            this.ChangeBTN.TabIndex = 4;
+            this.ChangeBTN.Text = "2. Change Signature Key Pair";
+            this.ChangeBTN.UseVisualStyleBackColor = true;
+            this.ChangeBTN.Click += new System.EventHandler(this.ChangeBTN_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ChangeBTN);
             this.Controls.Add(this.SignBTN);
             this.Controls.Add(this.DeleteBTN);
             this.Controls.Add(this.CreateBTN);
@@ -98,5 +110,6 @@
         private Button CreateBTN;
         private Button DeleteBTN;
         private Button SignBTN;
+        private Button ChangeBTN;
     }
 }

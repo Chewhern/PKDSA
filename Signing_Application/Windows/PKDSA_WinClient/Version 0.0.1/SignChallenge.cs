@@ -112,5 +112,13 @@ namespace PKDSA_WinClient
             KeyPairFolderNameCB.Items.Clear();
             KeyPairFolderNameCB.Items.AddRange(KeyPairFolderNames);
         }
+
+        private void KeyPairFolderNameCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (KeyPairFolderNameCB.SelectedIndex != -1) 
+            {
+                KeyPairFolderNameTB.Text = KeyPairFolderNameCB.Text;
+            }
+        }
     }
 }

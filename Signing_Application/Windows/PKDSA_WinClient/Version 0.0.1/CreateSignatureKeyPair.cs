@@ -48,14 +48,14 @@ namespace PKDSA_WinClient
                 //As the function copies and doesn't modify the keypair object's private key
                 //That's why we need to clear the private key after signing ASAP in memory given that
                 //you are able to understand security or cryptography
-                SignedPublicKey = SodiumPublicKeyAuth.Sign(MyED25519KeyPair.PublicKey, MyED25519KeyPair.PrivateKey, true);
+                SignedPublicKey = SodiumPublicKeyAuth.Sign(MyED25519KeyPair.PublicKey, MyED25519KeyPair.PrivateKey);
                 File.WriteAllBytes(SignatureKeyPairRootFolder + KeyPairFolderName + "\\Private_Key.txt", MyED25519KeyPair.PrivateKey);
                 File.WriteAllBytes(SignatureKeyPairRootFolder + KeyPairFolderName + "\\Public_Key.txt", MyED25519KeyPair.PublicKey);
             }
-            if (Curve448RB.Checked == true)
+            else
             {
                 File.WriteAllText(SignatureKeyPairRootFolder + KeyPairFolderName + "\\CurveType.txt", "IsCurve448");
-                SignedPublicKey = SecureED448.GenerateSignatureMessage(MyED448KeyPair.PrivateKey, MyED448KeyPair.PublicKey, new Byte[] { }, true);
+                SignedPublicKey = SecureED448.GenerateSignatureMessage(MyED448KeyPair.PrivateKey, MyED448KeyPair.PublicKey, new Byte[] { });
                 File.WriteAllBytes(SignatureKeyPairRootFolder + KeyPairFolderName + "\\Private_Key.txt", MyED448KeyPair.PrivateKey);
                 File.WriteAllBytes(SignatureKeyPairRootFolder + KeyPairFolderName + "\\Public_Key.txt", MyED448KeyPair.PublicKey);
             }
