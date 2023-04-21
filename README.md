@@ -12,7 +12,7 @@ Currently the first version of the PKDSA is hosted under the IP address of
 **https://chronops.xyz:5001/api/**
 
 # ChangeLog
-For detailed changelog, kindly refer to each of the 3 main folders.
+For detailed changelog, kindly refer to each of the subfolders within 3 main folders.
 
 # Guides
 
