@@ -3,6 +3,7 @@ This repository will be storing the code required in allowing public key authent
 
 # Important notice
 Since there're 3 applications here, there's client(2 applications type) and server application. The server application was hosted on a **pure unmanaged Ubuntu VPS**.
+**All of the components here are from open source with exceptions of IDE such as Visual Studio.**
 
 # IP Address(temporary)
 
