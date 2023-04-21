@@ -6,6 +6,9 @@ This repository will be storing the code required in allowing public key authent
 Currently the first version of the PKDSA is hosted under the IP address of
 **https://chronops.xyz:5001/api/**
 
+# ChangeLog
+For detailed changelog, kindly refer to each of the 3 main folders.
+
 # Guides
 
 I will be finding some time to talk solely on this project like how to install, run, customize to your own needs.
