@@ -1,6 +1,9 @@
 # PKDSA
 This repository will be storing the code required in allowing public key authentication.
 
+# Important notice
+Since there're 3 applications here, there's client(2 applications type) and server application. The server application was hosted on a **pure unmanaged Ubuntu VPS**.
+
 # IP Address(temporary)
 
 Currently the first version of the PKDSA is hosted under the IP address of
