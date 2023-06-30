@@ -8,6 +8,8 @@ Since there're 3 applications here, there's client(2 applications type) and serv
 
 **All of the components here are from open source with exceptions of IDE such as Visual Studio.**
 
+**The flow and logic behind "5." in Management Application is now being demonstrated by using ASP.Net Core (6) Razor pages..**
+
 # IP Address(temporary)
 
 Currently the first version of the PKDSA is hosted under the IP address of
