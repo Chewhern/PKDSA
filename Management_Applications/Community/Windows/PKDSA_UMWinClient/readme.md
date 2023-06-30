@@ -15,6 +15,6 @@ is a semi-automatic process. It's not fully automated and it can't be automated.
 - There's instructions that exists in 3rd sub part and the menu. Hopefully these will help to explain something.
 
 # Version 0.0.4
-- Reworked on TORProxy.
-- All web API calls now uses **async** and **await** to enable smoother UI.
+- Reworked on TOR Proxy.
+- Web API calls now uses **async** and **await** to enable smoother UI but these changes only apply to web API that uses TOR proxy.
 - There's some problems on TOR that I don't really know how to solve. I am sorry that you have to use TOR proxy in a slightly annoyed way.
