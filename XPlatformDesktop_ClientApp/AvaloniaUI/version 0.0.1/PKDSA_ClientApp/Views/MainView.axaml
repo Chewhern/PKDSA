@@ -1,0 +1,73 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:PKDSA_ClientApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PKDSA_ClientApp.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <TabControl Name="PKDSA_ClientApp_Tab" Margin="2">
+    <TabItem Header="Management Application">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Orientation="Vertical">
+            <ToggleButton Name="ManagementAppToggleBTN1" Background="White" Content=" 1. Download and start TOR deepweb " Margin="0,5,0,0" Padding="0,10,62,10"/>
+            <ToggleButton Name="ManagementAppToggleBTN2" Background="White" Content=" 1. Server's IP configuration " Margin="0,5,0,0" Padding="0,10,0,10"/>
+            <ToggleButton Name="ManagementAppToggleBTN3" Background="White" Content=" 2. Register an account " Margin="0,5,0,0" Padding="0,10,90,10"/>
+            <ToggleButton Name="ManagementAppToggleBTN4" Background="White" Content=" 3. Change Master Keys " Margin="0,5,0,0" Padding="0,10,85,10"/>
+            <ToggleButton Name="ManagementAppToggleBTN5" Background="White" Content=" 3. C and C master public key digest " Margin="0,5,0,0" Padding="0,10,3,10"/>
+            <ToggleButton Name="ManagementAppToggleBTN6" Background="White" Content=" 3. Add or remove sub key identifiers " Margin="0,5,0,0" Padding="0,10,0,10"/>
+            <ToggleButton Name="ManagementAppToggleBTN7" Background="White" Content=" 4. Add or change sub keys " Margin="0,5,0,0" Padding="0,10,62,10"/>
+            <StackPanel Orientation="Horizontal">
+              <Button Name="ManagementAppSBTN" Background="LightBlue" Content="🗘" Margin="0,5,0,0"/>
+            </StackPanel>
+            <TextBlock Text="Blue color refresh refreshes" Margin="0,10,0,0"/>
+            <TextBlock Text="and deletes the UI on"/>
+            <TextBlock Text="any toggled buttons."/>
+          </StackPanel>
+          <StackPanel Name="ManagementAppLowerRightLPSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="ManagementAppLowerRightRPSP" Orientation="Vertical" Margin="25,15,0,0">
+            <TextBlock Text="(After Set Up Completed) TOR Status (Read Only)"/>
+            <TextBox Name="TORStatusTB" IsReadOnly="true" />
+            <TextBlock Text="(After Set Up Completed) Server IP Status (Read Only)" Margin="0,20,0,0"/>
+            <TextBox Name="ServerIPStatusTB" IsReadOnly="true"/>
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+    <TabItem Header="Signing Application">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Orientation="Vertical">
+            <ToggleButton Name="SigningAppToggleBTN1" Background="White" Content=" 1. Create Signature Key Pair" Margin="0,5,0,0" Padding="0,10,15,10"/>
+            <ToggleButton Name="SigningAppToggleBTN2" Background="White" Content=" 2. View Signature Key Pair" Margin="0,5,0,0" Padding="0,10,23,10"/>
+            <ToggleButton Name="SigningAppToggleBTN3" Background="White" Content=" 2. Change Signature Key Pair" Margin="0,5,0,0" Padding="0,10,5,10"/>
+            <ToggleButton Name="SigningAppToggleBTN4" Background="White" Content=" 2. Delete Signature Key Pair" Margin="0,5,0,0" Padding="0,10,15,10"/>
+            <ToggleButton Name="SigningAppToggleBTN5" Background="White" Content=" 2. Sign Challenge" Margin="0,5,0,0" Padding="0,10,83,10"/>
+            <StackPanel Orientation="Horizontal">
+              <Button Name="SigningAppSBTN1" Background="LightBlue" Content="🗘" Margin="0,5,0,0"/>
+              <Button Name="SigningAppSBTN2" Background="LightGreen" Content="🗘" Margin="10,5,0,0"/>
+            </StackPanel>
+            <TextBlock Text="Blue color refresh refreshes" Margin="0,10,0,0"/>
+            <TextBlock Text="and deletes the UI on"/>
+            <TextBlock Text="any toggled buttons."/>
+            <TextBlock Text="Green color refresh refreshes" Margin="0,10,0,0"/>
+            <TextBlock Text="only on sub key"/>
+            <TextBlock Text="identifier combo box."/>
+          </StackPanel>
+          <StackPanel Name="SigningAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+          
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+  </TabControl>
+</UserControl>
