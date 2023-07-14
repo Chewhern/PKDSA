@@ -16,4 +16,44 @@ AvaloniaUI uses **Skia** an open source project which uses permissive license su
 ## Android
 1. Android 5.0+ (API 21)
 
-# Version (Tbc)
+# Version
+
+## 0.0.1
+- Combined Management Application and Signing Application into a application.
+- Removed **UserLoginUsingSubKeys** as it's redundant and it has been shown in **Web Consumption** with **ASP.Net Core 6/7 Web API**.
+
+### Requirements
+1. Need to download both dotnet-runtime and dotnet-sdk from Microsoft [Preferably install 6 and 7](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu).
+2. Install both dotnet items on your device.
+
+Note: On Linux, one needs to get dotnet from packamange manager (may have many variations).
+
+**Arch Linux**
+
+Super user
+```
+sudo pacman -S dotnet-runtime-6.0
+sudo pacman -S dotnet-sdk-6.0
+```
+
+Root user
+```
+pacman -S dotnet-runtime-7.0
+pacman -S dotnet-runtime-7.0
+```
+
+### Instruction to compile (Both folders must exist)
+1. First navigate to PKDSA_ClientApp then do **/dotnet build**
+2. Then navigate to PKDSA_ClietnApp.Desktop then do **/dotnet build**
+3. The compiled application will reside within **PKDSA_ClientApp.Desktop/bin/Debug**
+
+### Running on Windows
+1. Simply navigate to **PKDSA_ClientApp.Desktop/bin/Debug/Download_Link.txt**.
+2. Download and unzip.
+3. Double click on PKDSA_ClientApp.Desktop.exe
+
+### Running and troubleshooting on Windows/Linux/MacOS
+1. Same first and 2nd step.
+2. Open command prompt(Windows) or Terminal/Console(Linux/MacOS) then navigate to the unzipped applications.
+3. Do **dotnet PKDSA_ClientApp.Desktop.dll**
+4. A GUI applications should come out.
