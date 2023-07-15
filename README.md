@@ -1,10 +1,23 @@
 # PKDSA
 This repository will be storing the code required in allowing public key authentication.
 
+This application uses **web of trust** instead of **trust model** in **PKI**.
+
+**Trust model** can be seen in current HTTPS or CA certificate where businesses or individuals have to trust the providers or CAs to let the connections from client to web server to be secure.
+
+**Web of trust** can be described with I know Alice from my school or she's my friend, so she belongs to the lists of people I trust, the same goes to Alice when dealing with Bob and both of them dealing with CAs as well.
+
+**PKI at its simplest form, is 3 parties mutually verifying with each other to ensure there's no MITM, this is also consider as a web of trust. However with such assumption, PKI can't be fully implemented and our current digital world may be flawed.**
+
 # Important notice
 Since there're 3 applications here, there's client(2 applications type) and server application. The server application was hosted on a **pure unmanaged Ubuntu VPS**.
 
-**Since AvaloniaUI works, I will try to combine 2 client applications into 1 application and use AvaloniaUI to serve as a cross platform desktop UI.**
+**Since AvaloniaUI works, Management Applications and Signing Applications have been combined into AvaloniaUI project. You can look at it via "XPlatformDesktopClientApp/AvaloniaUI"**
+
+**Future applications will be all under XPlatform_*,since it needs to support other desktop OS(s). For mobile applications, I will think how to support on Android
+and IOS. I wish can support other custom rom of mobile phone OS but it's a completely new area for me and that might need other contributors helps.**
+
+**Management Application and Signing Application will now act as a draft before the existence XPlatform_*, those will still be used but a better version will be cross platform applications.**
 
 **All of the components here are from open source with exceptions of IDE such as Visual Studio.**
 
@@ -16,7 +29,21 @@ Currently the first version of the PKDSA is hosted under the IP address of
 **https://chronops.xyz:5001/api/**
 
 # ChangeLog
-For detailed changelog, kindly refer to each of the subfolders within 3 main folders.
+For detailed changelog, kindly refer to the following for the time being.
+
+## Management Application (Windows Desktop)
+[here](https://github.com/Chewhern/PKDSA/tree/main/Management_Applications/Community/Windows/PKDSA_UMWinClient)
+
+## Server Application (Unmanaged Ubuntu VPS)
+[here](https://github.com/Chewhern/PKDSA/tree/main/Server_Application/Community/Ubuntu)
+
+## Signing Application (Windows Desktop)
+There's no changelog here.
+
+## Cross Platform Desktop Application 
+[here](https://github.com/Chewhern/PKDSA/tree/main/XPlatformDesktop_ClientApp/AvaloniaUI)
+
+The prerequisites to get a full and detailed picture to the features is to understand it first on Management Application and Server Application.
 
 # Guides
 
