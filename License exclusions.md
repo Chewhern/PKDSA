@@ -60,6 +60,10 @@ The same goes to storing it in ASCII/Unicode/Base64.
 
 This again won't trigger AGPL V3 no matter what you choose as each of them is essentially like picking a poison.
 
+**It's also a reason in my humble opinion that security related software or cryptographic related software, it's best to develop in either C or C++ or slightly
+easier language such as C# or Java. However, there may be other applicable languages which suits cryptographic security or security related security requirements.
+I am just not sure other than C# or Java, what else can someone use or can use.**
+
 ## Signing Application
 The signing application by default uses cryptographic deterministic random number generator to produce random characters as key identifier, if you want to add
 some features which allow the client to know this sub key was for what or other sorts of applicable functions. This again won't trigger AGPL V3.
