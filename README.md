@@ -65,4 +65,4 @@ For the time being, you may not understand anything that I have written.
 #### Purposes
 1. Allowing public to understand how public key authentication could be done on website or devices.
 2. Allowing MySQL and PHPMyadmin developers to understand the logic behind public key authentication so that they could implement it into MySQL and PHPMyAdmin(Uncertain).
-3. Serve as a platform for a passwordless authentication.
+3. Serve as a platform/framework for passwordless authentication.
