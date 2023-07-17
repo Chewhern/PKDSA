@@ -23,6 +23,9 @@ and IOS. I wish can support other custom rom of mobile phone OS but it's a compl
 
 **The flow and logic behind "5." in Management Application is now being demonstrated by using ASP.Net Core (6) Razor pages..**
 
+**When you're using TOR within this full stack application, try to ensure your CPU was freed, TOR won't crash or the application won't crash as long as your CPU
+which shown in task manager(Windows) are not more than 25%.**
+
 # IP Address(temporary)
 
 Currently the first version of the PKDSA is hosted under the IP address of
