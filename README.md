@@ -56,7 +56,10 @@ and what are the considerations,thoughts that people should have.
 
 For the time being, you may not understand anything that I have written.
 
-## Purposes
+## Basic Guide
+[here](https://github.com/Chewhern/PKDSA/blob/main/Guides/Basic.txt)
+
+#### Purposes
 1. Allowing public to understand how public key authentication could be done on website or devices.
 2. Allowing MySQL and PHPMyadmin developers to understand the logic behind public key authentication so that they could implement it into MySQL and PHPMyAdmin(Uncertain).
 3. Serve as a platform for a passwordless authentication.
