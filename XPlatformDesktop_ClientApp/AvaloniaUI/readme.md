@@ -5,6 +5,11 @@ The UI has only been tested on **Endeavour OS** an **arch linux** distro and **W
 
 AvaloniaUI uses **Skia** an open source project which uses permissive license such as **OpenBSD** from **Google** and it generally can runs on these OS(s).
 
+**Note: I have tested this on Windows.. There's maximum 3 times that the application or UI will stop working after clicking performing 3 async functions..**
+
+**What exactly will happen to MacOS and Linux. I expect similar cases will happens on them. It's up to people to discover how many times before the application
+will stop working.. and have to manually restart.**
+
 ## Linux
 1. Debian 9 (Stretch)+
 2. Ubuntu 16.04+
