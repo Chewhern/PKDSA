@@ -15,6 +15,7 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Net;
 using System.Threading.Tasks;
+using Avalonia.Threading;
 
 namespace PKDSA_ClientApp.Views;
 
@@ -24,7 +25,18 @@ public partial class MainView : UserControl
     private static int ManagementAppUIChooser;
     private static RadioButton[] myRBArray = new RadioButton[] { };
     private static TextBlock[] myTextBlockArray = new TextBlock[] { };
-    private static TextBox[] myTBArray = new TextBox[] { };
+    private static TextBox[] FirstSAppmyTBArray = new TextBox[] { };
+    private static TextBox[] SecondSAppmyTBArray = new TextBox[] { };
+    private static TextBox[] ThirdSAppmyTBArray = new TextBox[] { };
+    private static TextBox[] FourthSAppmyTBArray = new TextBox[] { };
+    private static TextBox[] FifthSAppmyTBArray = new TextBox[] { };
+    private static TextBox[] FirstMAAppmyTBArray = new TextBox[] { };
+    private static TextBox[] SecondMAAppmyTBArray = new TextBox[] { };
+    private static TextBox[] ThirdMAAppmyTBArray = new TextBox[] { };
+    private static TextBox[] FourthMAAppmyTBArray = new TextBox[] { };
+    private static TextBox[] FifthMAAppmyTBArray = new TextBox[] { };
+    private static TextBox[] SixthMAAppmyTBArray = new TextBox[] { };
+    private static TextBox[] LastMAAppmyTBArray = new TextBox[] { };
     private static ComboBox[] myCBArray = new ComboBox[] { };
     private static Button[] myButtonArray = new Button[] { };
     private static String SigningAppRootFolder = "";
@@ -199,17 +211,17 @@ public partial class MainView : UserControl
                 myTextBlockArray[2].Text = "Digital Signature Key Pair Generation Status (Read Only)";
                 myTextBlockArray[1].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[2].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[2];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[1].IsReadOnly = true;
-                myTBArray[0].AcceptsReturn = true;
-                myTBArray[1].AcceptsReturn = true;
-                myTBArray[0].Height = 50;
-                myTBArray[1].Height = 50;
-                myTBArray[0].TextWrapping = TextWrapping.Wrap;
-                myTBArray[1].TextWrapping = TextWrapping.Wrap;
+                FirstSAppmyTBArray = new TextBox[2];
+                FirstSAppmyTBArray[0] = new TextBox();
+                FirstSAppmyTBArray[1] = new TextBox();
+                FirstSAppmyTBArray[0].IsReadOnly = true;
+                FirstSAppmyTBArray[1].IsReadOnly = true;
+                FirstSAppmyTBArray[0].AcceptsReturn = true;
+                FirstSAppmyTBArray[1].AcceptsReturn = true;
+                FirstSAppmyTBArray[0].Height = 50;
+                FirstSAppmyTBArray[1].Height = 50;
+                FirstSAppmyTBArray[0].TextWrapping = TextWrapping.Wrap;
+                FirstSAppmyTBArray[1].TextWrapping = TextWrapping.Wrap;
                 myRBArray = new RadioButton[2];
                 myRBArray[0] = new RadioButton();
                 myRBArray[1] = new RadioButton();
@@ -227,9 +239,9 @@ public partial class MainView : UserControl
                 SigningAppLowerRightSP.Children.Add(myRBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myRBArray[1]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[1]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[0]);
+                SigningAppLowerRightSP.Children.Add(FirstSAppmyTBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[2]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[1]);
+                SigningAppLowerRightSP.Children.Add(FirstSAppmyTBArray[1]);
                 SigningAppLowerRightSP.Children.Add(myButtonArray[0]);
                 HasUIRendered = true;
             }            
@@ -257,24 +269,24 @@ public partial class MainView : UserControl
                 myCBArray[0] = new ComboBox();
                 LoadSigningAppSubKeyIdentifiers();
                 myCBArray[0].SelectionChanged += SigningAppComboBoxSelectedItemsChanged;
-                myTBArray = new TextBox[4];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[3] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[1].IsReadOnly = true;
-                myTBArray[2].IsReadOnly = true;
-                myTBArray[3].IsReadOnly = true;
-                myTBArray[0].AcceptsReturn = true;
-                myTBArray[1].AcceptsReturn = true;
-                myTBArray[2].AcceptsReturn = true;
-                myTBArray[0].Height = 75;
-                myTBArray[1].Height = 75;
-                myTBArray[2].Height = 75;
-                myTBArray[0].Width = 370;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Width = 370;
+                SecondSAppmyTBArray = new TextBox[4];
+                SecondSAppmyTBArray[0] = new TextBox();
+                SecondSAppmyTBArray[1] = new TextBox();
+                SecondSAppmyTBArray[2] = new TextBox();
+                SecondSAppmyTBArray[3] = new TextBox();
+                SecondSAppmyTBArray[0].IsReadOnly = true;
+                SecondSAppmyTBArray[1].IsReadOnly = true;
+                SecondSAppmyTBArray[2].IsReadOnly = true;
+                SecondSAppmyTBArray[3].IsReadOnly = true;
+                SecondSAppmyTBArray[0].AcceptsReturn = true;
+                SecondSAppmyTBArray[1].AcceptsReturn = true;
+                SecondSAppmyTBArray[2].AcceptsReturn = true;
+                SecondSAppmyTBArray[0].Height = 75;
+                SecondSAppmyTBArray[1].Height = 75;
+                SecondSAppmyTBArray[2].Height = 75;
+                SecondSAppmyTBArray[0].Width = 370;
+                SecondSAppmyTBArray[1].Width = 370;
+                SecondSAppmyTBArray[2].Width = 370;
                 myButtonArray = new Button[1];
                 myButtonArray[0] = new Button();
                 myButtonArray[0].Margin = Avalonia.Thickness.Parse("0,10,0,0");
@@ -283,13 +295,13 @@ public partial class MainView : UserControl
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[0]);
                 SigningAppLowerRightSP.Children.Add(myCBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[1]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[0]);
+                SigningAppLowerRightSP.Children.Add(SecondSAppmyTBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[2]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[1]);
+                SigningAppLowerRightSP.Children.Add(SecondSAppmyTBArray[1]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[3]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[2]);
+                SigningAppLowerRightSP.Children.Add(SecondSAppmyTBArray[2]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[4]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[3]);
+                SigningAppLowerRightSP.Children.Add(SecondSAppmyTBArray[3]);
                 SigningAppLowerRightSP.Children.Add(myButtonArray[0]);
                 HasUIRendered = true;
             }
@@ -319,9 +331,9 @@ public partial class MainView : UserControl
                 myRBArray[0].IsChecked = true;
                 myRBArray[1].GroupName = "CurveTypes";
                 myRBArray[1].Content = "Curve448 - ED448 (Stable)";
-                myTBArray = new TextBox[1];
-                myTBArray[0] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
+                ThirdSAppmyTBArray = new TextBox[1];
+                ThirdSAppmyTBArray[0] = new TextBox();
+                ThirdSAppmyTBArray[0].IsReadOnly = true;
                 myButtonArray = new Button[1];
                 myButtonArray[0] = new Button();
                 myButtonArray[0].Margin = Avalonia.Thickness.Parse("0,10,0,0");
@@ -333,7 +345,7 @@ public partial class MainView : UserControl
                 SigningAppLowerRightSP.Children.Add(myRBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myRBArray[1]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[2]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[0]);
+                SigningAppLowerRightSP.Children.Add(ThirdSAppmyTBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myButtonArray[0]);
                 HasUIRendered = true;
             }
@@ -352,9 +364,9 @@ public partial class MainView : UserControl
                 myCBArray[0] = new ComboBox();
                 LoadSigningAppSubKeyIdentifiers();
                 myCBArray[0].SelectionChanged += SigningAppComboBoxSelectedItemsChanged;
-                myTBArray = new TextBox[1];
-                myTBArray[0] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
+                FourthSAppmyTBArray = new TextBox[1];
+                FourthSAppmyTBArray[0] = new TextBox();
+                FourthSAppmyTBArray[0].IsReadOnly = true;
                 myButtonArray = new Button[1];
                 myButtonArray[0] = new Button();
                 myButtonArray[0].Margin = Avalonia.Thickness.Parse("0,10,0,0");
@@ -363,7 +375,7 @@ public partial class MainView : UserControl
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[0]);
                 SigningAppLowerRightSP.Children.Add(myCBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[1]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[0]);
+                SigningAppLowerRightSP.Children.Add(FourthSAppmyTBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myButtonArray[0]);
                 HasUIRendered = true;
             }
@@ -394,25 +406,25 @@ public partial class MainView : UserControl
                 myCBArray[0] = new ComboBox();
                 LoadSigningAppSubKeyIdentifiers();
                 myCBArray[0].SelectionChanged += SigningAppComboBoxSelectedItemsChanged;
-                myTBArray = new TextBox[5];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[3] = new TextBox();
-                myTBArray[4] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[2].IsReadOnly = true;
-                myTBArray[3].IsReadOnly = true;
-                myTBArray[4].IsReadOnly = true;
-                myTBArray[0].AcceptsReturn = true;
-                myTBArray[1].AcceptsReturn = true;
-                myTBArray[2].AcceptsReturn = true;
-                myTBArray[0].Height = 75;
-                myTBArray[1].Height = 75;
-                myTBArray[2].Height = 75; 
-                myTBArray[0].Width = 370;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Width = 370;
+                FifthSAppmyTBArray = new TextBox[5];
+                FifthSAppmyTBArray[0] = new TextBox();
+                FifthSAppmyTBArray[1] = new TextBox();
+                FifthSAppmyTBArray[2] = new TextBox();
+                FifthSAppmyTBArray[3] = new TextBox();
+                FifthSAppmyTBArray[4] = new TextBox();
+                FifthSAppmyTBArray[0].IsReadOnly = true;
+                FifthSAppmyTBArray[2].IsReadOnly = true;
+                FifthSAppmyTBArray[3].IsReadOnly = true;
+                FifthSAppmyTBArray[4].IsReadOnly = true;
+                FifthSAppmyTBArray[0].AcceptsReturn = true;
+                FifthSAppmyTBArray[1].AcceptsReturn = true;
+                FifthSAppmyTBArray[2].AcceptsReturn = true;
+                FifthSAppmyTBArray[0].Height = 75;
+                FifthSAppmyTBArray[1].Height = 75;
+                FifthSAppmyTBArray[2].Height = 75;
+                FifthSAppmyTBArray[0].Width = 370;
+                FifthSAppmyTBArray[1].Width = 370;
+                FifthSAppmyTBArray[2].Width = 370;
                 myButtonArray = new Button[1];
                 myButtonArray[0] = new Button();
                 myButtonArray[0].Margin = Avalonia.Thickness.Parse("0,10,0,0");
@@ -421,15 +433,15 @@ public partial class MainView : UserControl
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[0]);
                 SigningAppLowerRightSP.Children.Add(myCBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[1]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[0]);
+                SigningAppLowerRightSP.Children.Add(FifthSAppmyTBArray[0]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[2]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[1]);
+                SigningAppLowerRightSP.Children.Add(FifthSAppmyTBArray[1]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[3]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[2]);
+                SigningAppLowerRightSP.Children.Add(FifthSAppmyTBArray[2]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[4]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[3]);
+                SigningAppLowerRightSP.Children.Add(FifthSAppmyTBArray[3]);
                 SigningAppLowerRightSP.Children.Add(myTextBlockArray[5]);
-                SigningAppLowerRightSP.Children.Add(myTBArray[4]);
+                SigningAppLowerRightSP.Children.Add(FifthSAppmyTBArray[4]);
                 SigningAppLowerRightSP.Children.Add(myButtonArray[0]);
                 HasUIRendered = true;
             }
@@ -446,7 +458,17 @@ public partial class MainView : UserControl
         {
             if (SigningAppUIChooser == 2 || SigningAppUIChooser == 5)
             {
-                myTBArray[0].Text = myCBArray[0].SelectedItem.ToString();
+                if (SecondSAppmyTBArray.Length != 0)
+                {
+                    SecondSAppmyTBArray[0].Text = myCBArray[0].SelectedItem.ToString();
+                }
+            }
+            else if (SigningAppUIChooser == 5)
+            {
+                if (FifthSAppmyTBArray.Length != 0)
+                {
+                    FifthSAppmyTBArray[0].Text = myCBArray[0].SelectedItem.ToString();
+                }
             }
         }
     }
@@ -469,12 +491,19 @@ public partial class MainView : UserControl
             myCBArray[0].Items.Add(Sub_Key_Identifiers[Loop]);
             Loop += 1;
         }
-        if (SigningAppUIChooser == 2 || SigningAppUIChooser == 5) 
+        if (SigningAppUIChooser == 2 || SigningAppUIChooser == 5)
         {
-            if (myTBArray.Length != 0) 
+            if (SecondSAppmyTBArray.Length != 0)
             {
-                myTBArray[0].Text = "";
-            }            
+                SecondSAppmyTBArray[0].Text = "";
+            }
+        }
+        else if (SigningAppUIChooser == 5) 
+        {
+            if (FifthSAppmyTBArray.Length != 0)
+            {
+                FifthSAppmyTBArray[0].Text = "";
+            }
         }
     }
 
@@ -489,7 +518,11 @@ public partial class MainView : UserControl
         SigningAppLowerRightSP.Children.Clear();
         myRBArray = new RadioButton[] { };
         myTextBlockArray = new TextBlock[] { };
-        myTBArray = new TextBox[] { };
+        FirstSAppmyTBArray = new TextBox[] { };
+        SecondSAppmyTBArray = new TextBox[] { };
+        ThirdSAppmyTBArray = new TextBox[] { };
+        FourthSAppmyTBArray = new TextBox[] { };
+        FifthSAppmyTBArray = new TextBox[] { };
         myCBArray = new ComboBox[] { };
         myButtonArray = new Button[] { };
         HasUIRendered = false;
@@ -501,7 +534,11 @@ public partial class MainView : UserControl
         SigningAppLowerRightSP.Children.Clear();
         myRBArray = new RadioButton[] { };
         myTextBlockArray = new TextBlock[] { };
-        myTBArray = new TextBox[] { };
+        FirstSAppmyTBArray = new TextBox[] { };
+        SecondSAppmyTBArray = new TextBox[] { };
+        ThirdSAppmyTBArray = new TextBox[] { };
+        FourthSAppmyTBArray = new TextBox[] { };
+        FifthSAppmyTBArray = new TextBox[] { };
         myCBArray = new ComboBox[] { };
         myButtonArray = new Button[] { };
         HasUIRendered = false;
@@ -578,8 +615,8 @@ public partial class MainView : UserControl
             {
                 File.WriteAllBytes(SigningAppRootFolder + Sub_Key_Identifier + "/Signed_Public_Key.txt", SignedPublicKey);
             }
-            myTBArray[0].Text = Sub_Key_Identifier;
-            myTBArray[1].Text = "The signature keypairs have been created";
+            FirstSAppmyTBArray[0].Text = Sub_Key_Identifier;
+            FirstSAppmyTBArray[1].Text = "The signature keypairs have been created";
             MyED448KeyPair.Clear();
             MyED25519KeyPair.Clear();
         }
@@ -590,7 +627,7 @@ public partial class MainView : UserControl
             String Sub_Key_Identifier = myCBArray[0].SelectedItem.ToString();
             if (String.IsNullOrEmpty(Sub_Key_Identifier))
             {
-                myTBArray[3].Text = "There's no keypairs created or you have not choose any keypairs";
+                SecondSAppmyTBArray[3].Text = "There's no keypairs created or you have not choose any keypairs";
             }
             else
             {
@@ -607,12 +644,12 @@ public partial class MainView : UserControl
                         SignedPublicKey = File.ReadAllBytes(SigningAppRootFolder + Sub_Key_Identifier + "/Signed_Public_Key.txt");
                         SigningAppRootFolder = AppContext.BaseDirectory + "/SAppDSKP/";
                     }
-                    myTBArray[1].Text = Convert.ToBase64String(PublicKey);
-                    myTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
+                    SecondSAppmyTBArray[1].Text = Convert.ToBase64String(PublicKey);
+                    SecondSAppmyTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
                 }
                 else
                 {
-                    myTBArray[3].Text = "The specified sub key identifier can't be found";
+                    SecondSAppmyTBArray[3].Text = "The specified sub key identifier can't be found";
                 }
             }
         }
@@ -666,7 +703,7 @@ public partial class MainView : UserControl
                 {
                     File.WriteAllBytes(SigningAppRootFolder + Sub_Key_Identifier + "/Signed_Public_Key.txt", SignedPublicKey);
                 }
-                myTBArray[0].Text = "The signature keypair in specified sub key identifier has been changed";
+                ThirdSAppmyTBArray[0].Text = "The signature keypair in specified sub key identifier has been changed";
                 MyED448KeyPair.Clear();
                 MyED25519KeyPair.Clear();
             }
@@ -676,18 +713,18 @@ public partial class MainView : UserControl
             String Sub_Key_Identifier = myCBArray[0].SelectedItem.ToString();
             if (String.IsNullOrEmpty(Sub_Key_Identifier))
             {
-                myTBArray[0].Text = "There's no keypairs created or you have not choose any keypairs";
+                FourthSAppmyTBArray[0].Text = "There's no keypairs created or you have not choose any keypairs";
             }
             else
             {
                 if (Directory.Exists(SigningAppRootFolder + Sub_Key_Identifier) == true)
                 {
                     Directory.Delete(SigningAppRootFolder + Sub_Key_Identifier, true);
-                    myTBArray[0].Text = "The specified sub key identifier has been deleted";
+                    FourthSAppmyTBArray[0].Text = "The specified sub key identifier has been deleted";
                 }
                 else
                 {
-                    myTBArray[0].Text = "The specified sub key identifier can't be found";
+                    FourthSAppmyTBArray[0].Text = "The specified sub key identifier can't be found";
                 }
             }
             LoadSigningAppSubKeyIdentifiers();
@@ -699,11 +736,11 @@ public partial class MainView : UserControl
             Byte[] SignedChallenge = new Byte[] { };
             Boolean TryParseFromBase64String = true;
             String CurveDeterminer = "";
-            String ChallengeString = myTBArray[1].Text;
+            String ChallengeString = FifthSAppmyTBArray[1].Text;
             String Sub_Key_Identifier = myCBArray[0].SelectedItem.ToString();
             if (String.IsNullOrEmpty(Sub_Key_Identifier))
             {
-                myTBArray[4].Text = "There's no keypairs created or you have not choose any keypairs";
+                FifthSAppmyTBArray[4].Text = "There's no keypairs created or you have not choose any keypairs";
             }
             else
             {
@@ -711,7 +748,7 @@ public partial class MainView : UserControl
                 {
                     if (String.IsNullOrEmpty(ChallengeString) == true)
                     {
-                        myTBArray[4].Text = "Please get the base 64 encoded challenge from provider";
+                        FifthSAppmyTBArray[4].Text = "Please get the base 64 encoded challenge from provider";
                     }
                     else
                     {
@@ -738,30 +775,30 @@ public partial class MainView : UserControl
                             if (CurveDeterminer.CompareTo("IsCurve25519") == 0)
                             {
                                 SignedChallenge = SodiumPublicKeyAuth.Sign(Challenge, PrivateKey);
-                                myTBArray[2].Text = Convert.ToBase64String(SignedChallenge);
-                                myTBArray[3].Text = CurveDeterminer;
+                                FifthSAppmyTBArray[2].Text = Convert.ToBase64String(SignedChallenge);
+                                FourthSAppmyTBArray[3].Text = CurveDeterminer;
                             }
                             else if (CurveDeterminer.CompareTo("IsCurve448") == 0)
                             {
                                 SignedChallenge = SecureED448.GenerateSignatureMessage(PrivateKey, Challenge, new Byte[] { });
-                                myTBArray[2].Text = Convert.ToBase64String(SignedChallenge);
-                                myTBArray[3].Text = CurveDeterminer;
+                                FifthSAppmyTBArray[2].Text = Convert.ToBase64String(SignedChallenge);
+                                FifthSAppmyTBArray[3].Text = CurveDeterminer;
                             }
                             else
                             {
-                                myTBArray[4].Text = "Something's wrong with the Curve Type File";
+                                FifthSAppmyTBArray[4].Text = "Something's wrong with the Curve Type File";
                             }
                             SodiumSecureMemory.SecureClearBytes(PrivateKey);
                         }
                         else
                         {
-                            myTBArray[4].Text = "This is not a valid Base 64 encoded string/challenge";
+                            FifthSAppmyTBArray[4].Text = "This is not a valid Base 64 encoded string/challenge";
                         }
                     }
                 }
                 else
                 {
-                    myTBArray[4].Text = "The specified sub key identifier can't be found";
+                    FifthSAppmyTBArray[4].Text = "The specified sub key identifier can't be found";
                 }
             }
         }
@@ -881,7 +918,13 @@ public partial class MainView : UserControl
         ManagementAppLowerRightLPSP.Children.Clear();
         myRBArray = new RadioButton[] { };
         myTextBlockArray = new TextBlock[] { };
-        myTBArray = new TextBox[] { };
+        FirstMAAppmyTBArray = new TextBox[] { };
+        SecondMAAppmyTBArray = new TextBox[] { };
+        ThirdMAAppmyTBArray = new TextBox[] { };
+        FourthMAAppmyTBArray = new TextBox[] { };
+        FifthMAAppmyTBArray = new TextBox[] { };
+        SixthMAAppmyTBArray = new TextBox[] { };
+        LastMAAppmyTBArray = new TextBox[] { };
         myCBArray = new ComboBox[] { };
         myButtonArray = new Button[] { };
         MAHasUIRendered = false;
@@ -893,7 +936,13 @@ public partial class MainView : UserControl
         ManagementAppLowerRightLPSP.Children.Clear();
         myRBArray = new RadioButton[] { };
         myTextBlockArray = new TextBlock[] { };
-        myTBArray = new TextBox[] { };
+        FirstMAAppmyTBArray = new TextBox[] { };
+        SecondMAAppmyTBArray = new TextBox[] { };
+        ThirdMAAppmyTBArray = new TextBox[] { };
+        FourthMAAppmyTBArray = new TextBox[] { };
+        FifthMAAppmyTBArray = new TextBox[] { };
+        SixthMAAppmyTBArray = new TextBox[] { };
+        LastMAAppmyTBArray = new TextBox[] { };
         myCBArray = new ComboBox[] { };
         myButtonArray = new Button[] { };
         MAHasUIRendered = false;
@@ -916,11 +965,11 @@ public partial class MainView : UserControl
                 myCBArray[0].Items.Add("1. Download TOR");
                 myCBArray[0].Items.Add("1/2. Start TOR");
                 myCBArray[0].Items.Add("2/3. Stop TOR");
-                myTBArray = new TextBox[1];
-                myTBArray[0] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[0].Height = 75;
-                myTBArray[0].Width = 370;
+                FirstMAAppmyTBArray = new TextBox[1];
+                FirstMAAppmyTBArray[0] = new TextBox();
+                FirstMAAppmyTBArray[0].IsReadOnly = true;
+                FirstMAAppmyTBArray[0].Height = 75;
+                FirstMAAppmyTBArray[0].Width = 370;
                 myButtonArray = new Button[1];
                 myButtonArray[0] = new Button();
                 myButtonArray[0].Margin = Avalonia.Thickness.Parse("0,10,0,0");
@@ -929,7 +978,7 @@ public partial class MainView : UserControl
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myCBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(FirstMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;
             }
@@ -947,18 +996,18 @@ public partial class MainView : UserControl
                 myTextBlockArray[2].Text = "Server IP address status (Read Only)";
                 myTextBlockArray[1].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[2].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[2];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[1].IsReadOnly = true;
-                myTBArray[0].AcceptsReturn = true;
-                myTBArray[1].AcceptsReturn = true;
-                myTBArray[0].Height = 75;
-                myTBArray[1].Height = 75;
-                myTBArray[0].Height = 100;
-                myTBArray[1].Height = 100;
-                myTBArray[0].TextWrapping = TextWrapping.Wrap;
-                myTBArray[1].TextWrapping = TextWrapping.Wrap;
+                SecondMAAppmyTBArray = new TextBox[2];
+                SecondMAAppmyTBArray[0] = new TextBox();
+                SecondMAAppmyTBArray[1] = new TextBox();
+                SecondMAAppmyTBArray[1].IsReadOnly = true;
+                SecondMAAppmyTBArray[0].AcceptsReturn = true;
+                SecondMAAppmyTBArray[1].AcceptsReturn = true;
+                SecondMAAppmyTBArray[0].Height = 75;
+                SecondMAAppmyTBArray[1].Height = 75;
+                SecondMAAppmyTBArray[0].Height = 100;
+                SecondMAAppmyTBArray[1].Height = 100;
+                SecondMAAppmyTBArray[0].TextWrapping = TextWrapping.Wrap;
+                SecondMAAppmyTBArray[1].TextWrapping = TextWrapping.Wrap;
                 myCBArray = new ComboBox[1];
                 myCBArray[0] = new ComboBox();
                 myCBArray[0].Items.Add("1. Add provider IP");
@@ -969,11 +1018,11 @@ public partial class MainView : UserControl
                 myButtonArray[0].Content = "Set or establish server connection";
                 myButtonArray[0].Click += ManagementAppBTN_Click;
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(SecondMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myCBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[2]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[1]);
+                ManagementAppLowerRightLPSP.Children.Add(SecondMAAppmyTBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;
             }
@@ -1003,26 +1052,26 @@ public partial class MainView : UserControl
                 myTextBlockArray[4].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[5].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[6].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[5];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[3] = new TextBox();
-                myTBArray[4] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[1].IsReadOnly = true;
-                myTBArray[2].IsReadOnly = true;
-                myTBArray[4].IsReadOnly = true;
-                myTBArray[0].Height = 50;
-                myTBArray[0].Width = 370;
-                myTBArray[1].Height = 50;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Height = 50;
-                myTBArray[2].Width = 370;
-                myTBArray[3].Height = 50;
-                myTBArray[3].Width = 370;
-                myTBArray[4].Height = 100;
-                myTBArray[4].Width = 370;
+                ThirdMAAppmyTBArray = new TextBox[5];
+                ThirdMAAppmyTBArray[0] = new TextBox();
+                ThirdMAAppmyTBArray[1] = new TextBox();
+                ThirdMAAppmyTBArray[2] = new TextBox();
+                ThirdMAAppmyTBArray[3] = new TextBox();
+                ThirdMAAppmyTBArray[4] = new TextBox();
+                ThirdMAAppmyTBArray[0].IsReadOnly = true;
+                ThirdMAAppmyTBArray[1].IsReadOnly = true;
+                ThirdMAAppmyTBArray[2].IsReadOnly = true;
+                ThirdMAAppmyTBArray[4].IsReadOnly = true;
+                ThirdMAAppmyTBArray[0].Height = 50;
+                ThirdMAAppmyTBArray[0].Width = 370;
+                ThirdMAAppmyTBArray[1].Height = 50;
+                ThirdMAAppmyTBArray[1].Width = 370;
+                ThirdMAAppmyTBArray[2].Height = 50;
+                ThirdMAAppmyTBArray[2].Width = 370;
+                ThirdMAAppmyTBArray[3].Height = 50;
+                ThirdMAAppmyTBArray[3].Width = 370;
+                ThirdMAAppmyTBArray[4].Height = 100;
+                ThirdMAAppmyTBArray[4].Width = 370;
                 myCBArray = new ComboBox[1];
                 myCBArray[0] = new ComboBox();
                 myCBArray[0].Items.Add("1. Generate Keys Locally");
@@ -1041,20 +1090,20 @@ public partial class MainView : UserControl
                 myButtonArray[0].Content = "Generate or submit information";
                 myButtonArray[0].Click += ManagementAppBTN_Click;
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(ThirdMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[1]);
+                ManagementAppLowerRightLPSP.Children.Add(ThirdMAAppmyTBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[2]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[2]);
+                ManagementAppLowerRightLPSP.Children.Add(ThirdMAAppmyTBArray[2]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[3]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[3]);
+                ManagementAppLowerRightLPSP.Children.Add(ThirdMAAppmyTBArray[3]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[5]);
                 ManagementAppLowerRightLPSP.Children.Add(myCBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[6]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[4]);
+                ManagementAppLowerRightLPSP.Children.Add(ThirdMAAppmyTBArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;
             }
@@ -1081,23 +1130,23 @@ public partial class MainView : UserControl
                 myTextBlockArray[3].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[4].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[5].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[4];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[3] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[1].IsReadOnly = true;
-                myTBArray[2].IsReadOnly = true;
-                myTBArray[3].IsReadOnly = true;
-                myTBArray[0].Height = 50;
-                myTBArray[0].Width = 370;
-                myTBArray[1].Height = 50;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Height = 50;
-                myTBArray[2].Width = 370;
-                myTBArray[3].Height = 50;
-                myTBArray[3].Width = 370;
+                FourthMAAppmyTBArray = new TextBox[4];
+                FourthMAAppmyTBArray[0] = new TextBox();
+                FourthMAAppmyTBArray[1] = new TextBox();
+                FourthMAAppmyTBArray[2] = new TextBox();
+                FourthMAAppmyTBArray[3] = new TextBox();
+                FourthMAAppmyTBArray[0].IsReadOnly = true;
+                FourthMAAppmyTBArray[1].IsReadOnly = true;
+                FourthMAAppmyTBArray[2].IsReadOnly = true;
+                FourthMAAppmyTBArray[3].IsReadOnly = true;
+                FourthMAAppmyTBArray[0].Height = 50;
+                FourthMAAppmyTBArray[0].Width = 370;
+                FourthMAAppmyTBArray[1].Height = 50;
+                FourthMAAppmyTBArray[1].Width = 370;
+                FourthMAAppmyTBArray[2].Height = 50;
+                FourthMAAppmyTBArray[2].Width = 370;
+                FourthMAAppmyTBArray[3].Height = 50;
+                FourthMAAppmyTBArray[3].Width = 370;
                 myCBArray = new ComboBox[1];
                 myCBArray[0] = new ComboBox();
                 myCBArray[0].Items.Add("1. Generate Keys Locally");
@@ -1116,18 +1165,18 @@ public partial class MainView : UserControl
                 myButtonArray[0].Content = "Generate or change information";
                 myButtonArray[0].Click += ManagementAppBTN_Click;
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(FourthMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[1]);
+                ManagementAppLowerRightLPSP.Children.Add(FourthMAAppmyTBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[2]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[2]);
+                ManagementAppLowerRightLPSP.Children.Add(FourthMAAppmyTBArray[2]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[3]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myCBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[5]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[3]);
+                ManagementAppLowerRightLPSP.Children.Add(FourthMAAppmyTBArray[3]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;                
             }
@@ -1154,28 +1203,28 @@ public partial class MainView : UserControl
                 myTextBlockArray[3].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[4].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[5].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[5];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[3] = new TextBox();
-                myTBArray[4] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[1].IsReadOnly = true;
-                myTBArray[2].IsReadOnly = true;
-                myTBArray[3].IsReadOnly = true;
-                myTBArray[4].IsReadOnly = true;
-                myTBArray[0].Height = 50;
-                myTBArray[0].Width = 370;
-                myTBArray[1].Height = 50;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Height = 50;
-                myTBArray[2].Width = 370;
-                myTBArray[3].Height = 50;
-                myTBArray[3].Width = 370;
-                myTBArray[4].Height = 50;
-                myTBArray[4].Width = 370;
-                myTBArray[3].Text = "05573054e242144d0df881e763d4806d9eee207a81900d790d49401b5bd2f44c36";
+                FifthMAAppmyTBArray = new TextBox[5];
+                FifthMAAppmyTBArray[0] = new TextBox();
+                FifthMAAppmyTBArray[1] = new TextBox();
+                FifthMAAppmyTBArray[2] = new TextBox();
+                FifthMAAppmyTBArray[3] = new TextBox();
+                FifthMAAppmyTBArray[4] = new TextBox();
+                FifthMAAppmyTBArray[0].IsReadOnly = true;
+                FifthMAAppmyTBArray[1].IsReadOnly = true;
+                FifthMAAppmyTBArray[2].IsReadOnly = true;
+                FifthMAAppmyTBArray[3].IsReadOnly = true;
+                FifthMAAppmyTBArray[4].IsReadOnly = true;
+                FifthMAAppmyTBArray[0].Height = 50;
+                FifthMAAppmyTBArray[0].Width = 370;
+                FifthMAAppmyTBArray[1].Height = 50;
+                FifthMAAppmyTBArray[1].Width = 370;
+                FifthMAAppmyTBArray[2].Height = 50;
+                FifthMAAppmyTBArray[2].Width = 370;
+                FifthMAAppmyTBArray[3].Height = 50;
+                FifthMAAppmyTBArray[3].Width = 370;
+                FifthMAAppmyTBArray[4].Height = 50;
+                FifthMAAppmyTBArray[4].Width = 370;
+                FifthMAAppmyTBArray[3].Text = "05573054e242144d0df881e763d4806d9eee207a81900d790d49401b5bd2f44c36";
                 myCBArray = new ComboBox[1];
                 myCBArray[0] = new ComboBox();
                 myCBArray[0].Items.Add("1/2. Compute pub key digest");
@@ -1187,17 +1236,17 @@ public partial class MainView : UserControl
                 myButtonArray[0].Content = "Fetch and compare digest";
                 myButtonArray[0].Click += ManagementAppBTN_Click;
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(FifthMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[1]);
+                ManagementAppLowerRightLPSP.Children.Add(FifthMAAppmyTBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[2]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[2]);
+                ManagementAppLowerRightLPSP.Children.Add(FifthMAAppmyTBArray[2]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[3]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[3]);
+                ManagementAppLowerRightLPSP.Children.Add(FifthMAAppmyTBArray[3]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myCBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[5]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[4]);
+                ManagementAppLowerRightLPSP.Children.Add(FifthMAAppmyTBArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;
             }
@@ -1218,18 +1267,18 @@ public partial class MainView : UserControl
                 myTextBlockArray[1].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[2].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[3].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[3];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[2].IsReadOnly = true;
-                myTBArray[0].Height = 50;
-                myTBArray[0].Width = 370;
-                myTBArray[1].Height = 50;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Height = 50;
-                myTBArray[2].Width = 370;
+                SixthMAAppmyTBArray = new TextBox[3];
+                SixthMAAppmyTBArray[0] = new TextBox();
+                SixthMAAppmyTBArray[1] = new TextBox();
+                SixthMAAppmyTBArray[2] = new TextBox();
+                SixthMAAppmyTBArray[0].IsReadOnly = true;
+                SixthMAAppmyTBArray[2].IsReadOnly = true;
+                SixthMAAppmyTBArray[0].Height = 50;
+                SixthMAAppmyTBArray[0].Width = 370;
+                SixthMAAppmyTBArray[1].Height = 50;
+                SixthMAAppmyTBArray[1].Width = 370;
+                SixthMAAppmyTBArray[2].Height = 50;
+                SixthMAAppmyTBArray[2].Width = 370;
                 myRBArray = new RadioButton[2];
                 myRBArray[0] = new RadioButton();
                 myRBArray[1] = new RadioButton();
@@ -1244,14 +1293,14 @@ public partial class MainView : UserControl
                 myButtonArray[0].Content = "Add/remove key identifier";
                 myButtonArray[0].Click += ManagementAppBTN_Click;
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(SixthMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[1]);
+                ManagementAppLowerRightLPSP.Children.Add(SixthMAAppmyTBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[2]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[3]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[2]);
+                ManagementAppLowerRightLPSP.Children.Add(SixthMAAppmyTBArray[2]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;
             }
@@ -1278,24 +1327,24 @@ public partial class MainView : UserControl
                 myTextBlockArray[3].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[4].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
                 myTextBlockArray[5].Margin = Avalonia.Thickness.Parse("0, 10, 0, 0");
-                myTBArray = new TextBox[5];
-                myTBArray[0] = new TextBox();
-                myTBArray[1] = new TextBox();
-                myTBArray[2] = new TextBox();
-                myTBArray[3] = new TextBox();
-                myTBArray[4] = new TextBox();
-                myTBArray[0].IsReadOnly = true;
-                myTBArray[4].IsReadOnly = true;
-                myTBArray[0].Height = 50;
-                myTBArray[0].Width = 370;
-                myTBArray[1].Height = 50;
-                myTBArray[1].Width = 370;
-                myTBArray[2].Height = 50;
-                myTBArray[2].Width = 370;
-                myTBArray[3].Height = 50;
-                myTBArray[3].Width = 370;
-                myTBArray[4].Height = 50;
-                myTBArray[4].Width = 370;
+                LastMAAppmyTBArray = new TextBox[5];
+                LastMAAppmyTBArray[0] = new TextBox();
+                LastMAAppmyTBArray[1] = new TextBox();
+                LastMAAppmyTBArray[2] = new TextBox();
+                LastMAAppmyTBArray[3] = new TextBox();
+                LastMAAppmyTBArray[4] = new TextBox();
+                LastMAAppmyTBArray[0].IsReadOnly = true;
+                LastMAAppmyTBArray[4].IsReadOnly = true;
+                LastMAAppmyTBArray[0].Height = 50;
+                LastMAAppmyTBArray[0].Width = 370;
+                LastMAAppmyTBArray[1].Height = 50;
+                LastMAAppmyTBArray[1].Width = 370;
+                LastMAAppmyTBArray[2].Height = 50;
+                LastMAAppmyTBArray[2].Width = 370;
+                LastMAAppmyTBArray[3].Height = 50;
+                LastMAAppmyTBArray[3].Width = 370;
+                LastMAAppmyTBArray[4].Height = 50;
+                LastMAAppmyTBArray[4].Width = 370;
                 myRBArray = new RadioButton[2];
                 myRBArray[0] = new RadioButton();
                 myRBArray[1] = new RadioButton();
@@ -1310,18 +1359,18 @@ public partial class MainView : UserControl
                 myButtonArray[0].Content = "Add or change sub key";
                 myButtonArray[0].Click += ManagementAppBTN_Click;
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[0]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[0]);
+                ManagementAppLowerRightLPSP.Children.Add(LastMAAppmyTBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[1]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[1]);
+                ManagementAppLowerRightLPSP.Children.Add(LastMAAppmyTBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[2]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[2]);
+                ManagementAppLowerRightLPSP.Children.Add(LastMAAppmyTBArray[2]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[3]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[3]);
+                ManagementAppLowerRightLPSP.Children.Add(LastMAAppmyTBArray[3]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[0]);
                 ManagementAppLowerRightLPSP.Children.Add(myRBArray[1]);
                 ManagementAppLowerRightLPSP.Children.Add(myTextBlockArray[5]);
-                ManagementAppLowerRightLPSP.Children.Add(myTBArray[4]);
+                ManagementAppLowerRightLPSP.Children.Add(LastMAAppmyTBArray[4]);
                 ManagementAppLowerRightLPSP.Children.Add(myButtonArray[0]);
                 MAHasUIRendered = true;
             }
@@ -1349,32 +1398,32 @@ public partial class MainView : UserControl
                 }
                 TORMainOperations.SetToolsDirectory(ManagementAppTORRootFolder + "Zipped", ManagementAppTORRootFolder + "Extracted");
                 String TORDownloadStatus = await TORMainOperations.DownloadTOR();
-                myTBArray[0].Text= TORDownloadStatus;
+                FirstMAAppmyTBArray[0].Text= TORDownloadStatus;
             }
             else if (ComboBoxIndex == 1)
             {
                 if (Directory.Exists(ManagementAppTORRootFolder + "Zipped") == false || Directory.Exists(ManagementAppTORRootFolder + "Extracted") == false)
                 {
-                    myTBArray[0].Text = "You have not downloaded the TOR software";
+                    FirstMAAppmyTBArray[0].Text = "You have not downloaded the TOR software";
                 }
                 else
                 {
                     TORMainOperations.SetToolsDirectory(ManagementAppTORRootFolder + "Zipped", ManagementAppTORRootFolder + "Extracted");
                     String TORStartStatus = await TORMainOperations.StartTOR();
-                    myTBArray[0].Text = TORStartStatus;
+                    FirstMAAppmyTBArray[0].Text = TORStartStatus;
                 }
             }
             else if (ComboBoxIndex == 2)
             {
                 if (Directory.Exists(ManagementAppTORRootFolder + "Zipped") == false || Directory.Exists(ManagementAppTORRootFolder + "Extracted") == false)
                 {
-                    myTBArray[0].Text = "You have not downloaded the TOR software";
+                    FirstMAAppmyTBArray[0].Text = "You have not downloaded the TOR software";
                 }
                 else
                 {
                     TORMainOperations.SetToolsDirectory(ManagementAppTORRootFolder + "Zipped", ManagementAppTORRootFolder + "Extracted");
                     String TORStopStatus = TORMainOperations.StopTOR();
-                    myTBArray[0].Text = TORStopStatus;
+                    FirstMAAppmyTBArray[0].Text = TORStopStatus;
                 }
             }
         }
@@ -1384,21 +1433,21 @@ public partial class MainView : UserControl
             if (ComboBoxIndex == 0)
             {
                 String ServerIP = "";
-                ServerIP = myTBArray[0].Text;
+                ServerIP = SecondMAAppmyTBArray[0].Text;
                 if (String.IsNullOrEmpty(ServerIP) == true)
                 {
-                    myTBArray[1].Text = "Please enter a valid server IP address";
+                    SecondMAAppmyTBArray[1].Text = "Please enter a valid server IP address";
                 }
                 else
                 {
                     File.WriteAllText(ManagementAppServerRootFolder + "IP.txt", ServerIP);
-                    myTBArray[1].Text = "The server IP address has been recorded";
+                    SecondMAAppmyTBArray[1].Text = "The server IP address has been recorded";
                 }
             }
             else if (ComboBoxIndex == 1)
             {
                 EstablishConnection.CreateLinkWithServer();
-                myTBArray[1].Text = EstablishConnection.ConnectionStatus;
+                SecondMAAppmyTBArray[1].Text = EstablishConnection.ConnectionStatus;
             }
         }
         else if (ManagementAppUIChooser == 3)
@@ -1414,15 +1463,15 @@ public partial class MainView : UserControl
                         User_ID = User_ID.Substring(0, 48);
                     }
                     File.WriteAllText(ManagementAppUserRootFolder + "User_ID.txt", User_ID);
-                    myTBArray[0].Text = User_ID;
+                    ThirdMAAppmyTBArray[0].Text = User_ID;
                     if (myRBArray[0].IsChecked == true)
                     {
                         RevampedKeyPair MyKeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "PublicKey.txt", MyKeyPair.PublicKey);
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "PrivateKey.txt", MyKeyPair.PrivateKey);
                         Byte[] SignedPublicKey = SodiumPublicKeyAuth.Sign(MyKeyPair.PublicKey, MyKeyPair.PrivateKey);
-                        myTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
-                        myTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
+                        ThirdMAAppmyTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
+                        ThirdMAAppmyTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
                         MyKeyPair.Clear();
                     }
                     else
@@ -1431,14 +1480,14 @@ public partial class MainView : UserControl
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "PublicKey.txt", MyKeyPair.PublicKey);
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "PrivateKey.txt", MyKeyPair.PrivateKey);
                         Byte[] SignedPublicKey = SecureED448.GenerateSignatureMessage(MyKeyPair.PrivateKey, MyKeyPair.PublicKey, new Byte[] { });
-                        myTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
-                        myTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
+                        ThirdMAAppmyTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
+                        ThirdMAAppmyTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
                         MyKeyPair.Clear();
                     }
                 }
                 else
                 {
-                    myTBArray[4].Text = "If you want to have multiple account that resides within this device," + Environment.NewLine +
+                    ThirdMAAppmyTBArray[4].Text = "If you want to have multiple account that resides within this device," + Environment.NewLine +
                         "kindly copies the folder without all the data and paste it other location" + Environment.NewLine +
                         "within this device."+Environment.NewLine+
                         "This might have some security risks that you need to accept"+Environment.NewLine+
@@ -1448,16 +1497,16 @@ public partial class MainView : UserControl
             }
             else if (ComboBoxIndex == 1)
             {
-                String UserID = myTBArray[0].Text;
-                String PublicKey = myTBArray[1].Text;
-                String SignedPublicKey = myTBArray[2].Text;
-                String Session_ID = myTBArray[3].Text;
+                String UserID = ThirdMAAppmyTBArray[0].Text;
+                String PublicKey = ThirdMAAppmyTBArray[1].Text;
+                String SignedPublicKey = ThirdMAAppmyTBArray[2].Text;
+                String Session_ID = ThirdMAAppmyTBArray[3].Text;
                 if ((UserID!=null && UserID.CompareTo("") != 0) && (PublicKey!=null &&PublicKey.CompareTo("") != 0) && (SignedPublicKey!=null && SignedPublicKey.CompareTo("") != 0) && (Session_ID!=null && Session_ID.CompareTo("") != 0))
                 {
                     if (TORMainOperations.UsingTor == true)
                     {
                         String ResultText = await TORProxySubmitInfo(UserID, Session_ID, SignedPublicKey, PublicKey);
-                        myTBArray[4].Text = ResultText;
+                        ThirdMAAppmyTBArray[4].Text = ResultText;
                     }
                     else
                     {
@@ -1476,18 +1525,18 @@ public partial class MainView : UserControl
                                 readTask.Wait();
 
                                 var Result = readTask.Result;
-                                myTBArray[4].Text = Result.Substring(1, Result.Length - 2);
+                                ThirdMAAppmyTBArray[4].Text = Result.Substring(1, Result.Length - 2);
                             }
                             else
                             {
-                                myTBArray[4].Text="There's something wrong on the server side..";
+                                ThirdMAAppmyTBArray[4].Text="There's something wrong on the server side..";
                             }
                         }
                     }
                 }
                 else
                 {
-                    myTBArray[4].Text="You didn't generate keys locally or fill in the required information";
+                    ThirdMAAppmyTBArray[4].Text="You didn't generate keys locally or fill in the required information";
                 }
             }
         }
@@ -1499,15 +1548,15 @@ public partial class MainView : UserControl
                 String User_ID = File.ReadAllText(ManagementAppUserRootFolder + "User_ID.txt");
                 if (ComboBoxIndex == 0)
                 {
-                    myTBArray[0].Text = User_ID;
+                    FourthMAAppmyTBArray[0].Text = User_ID;
                     if (myRBArray[0].IsChecked == true)
                     {
                         RevampedKeyPair MyKeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "NewPublicKey.txt", MyKeyPair.PublicKey);
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "NewPrivateKey.txt", MyKeyPair.PrivateKey);
                         Byte[] SignedPublicKey = SodiumPublicKeyAuth.Sign(MyKeyPair.PublicKey, MyKeyPair.PrivateKey);
-                        myTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
-                        myTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
+                        FourthMAAppmyTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
+                        FourthMAAppmyTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
                         MyKeyPair.Clear();
                     }
                     else
@@ -1516,8 +1565,8 @@ public partial class MainView : UserControl
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "NewPublicKey.txt", MyKeyPair.PublicKey);
                         File.WriteAllBytes(ManagementAppMasterKeyRootFolder + "NewPrivateKey.txt", MyKeyPair.PrivateKey);
                         Byte[] SignedPublicKey = SecureED448.GenerateSignatureMessage(MyKeyPair.PrivateKey, MyKeyPair.PublicKey, new Byte[] { });
-                        myTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
-                        myTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
+                        FourthMAAppmyTBArray[1].Text = Convert.ToBase64String(MyKeyPair.PublicKey);
+                        FourthMAAppmyTBArray[2].Text = Convert.ToBase64String(SignedPublicKey);
                         MyKeyPair.Clear();
                     }
                 }
@@ -1550,7 +1599,7 @@ public partial class MainView : UserControl
                     }
                     if (TORMainOperations.UsingTor == true)
                     {
-                        myTBArray[3].Text = await TORProxyChangeMasterKey(User_ID, UserSignedChallenge);
+                        FourthMAAppmyTBArray[3].Text = await TORProxyChangeMasterKey(User_ID, UserSignedChallenge);
                     }
                     else
                     {
@@ -1560,7 +1609,7 @@ public partial class MainView : UserControl
                             client.DefaultRequestHeaders.Accept.Clear();
                             client.DefaultRequestHeaders.Accept.Add(
                                 new MediaTypeWithQualityHeaderValue("application/json"));
-                            var response = client.GetAsync("ChangeKey?User_ID=" + User_ID + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[2].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[1].Text));
+                            var response = client.GetAsync("ChangeKey?User_ID=" + User_ID + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(FourthMAAppmyTBArray[2].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(FourthMAAppmyTBArray[1].Text));
                             response.Wait();
                             var result = response.Result;
                             if (result.IsSuccessStatusCode)
@@ -1570,7 +1619,7 @@ public partial class MainView : UserControl
 
                                 var Result = readTask.Result;
 
-                                myTBArray[3].Text = Result.Substring(1, Result.Length - 2);
+                                FourthMAAppmyTBArray[3].Text = Result.Substring(1, Result.Length - 2);
 
                                 File.Delete(ManagementAppMasterKeyRootFolder + "PrivateKey.txt");
                                 File.Delete(ManagementAppMasterKeyRootFolder + "PublicKey.txt");
@@ -1579,7 +1628,7 @@ public partial class MainView : UserControl
                             }
                             else
                             {
-                                myTBArray[3].Text = "There's something wrong on the server side..";
+                                FourthMAAppmyTBArray[3].Text = "There's something wrong on the server side..";
                             }
                         }
                     }
@@ -1587,7 +1636,7 @@ public partial class MainView : UserControl
             }
             else 
             {
-                myTBArray[3].Text = "You have not yet register an account";
+                FourthMAAppmyTBArray[3].Text = "You have not yet register an account";
             }            
         }
         else if (ManagementAppUIChooser == 5)
@@ -1598,16 +1647,16 @@ public partial class MainView : UserControl
                 String User_ID = File.ReadAllText(ManagementAppUserRootFolder + "User_ID.txt");
                 if (ComboBoxIndex == 0)
                 {
-                    myTBArray[0].Text = User_ID;
+                    FifthMAAppmyTBArray[0].Text = User_ID;
                     Byte[] MasterPublicKey = File.ReadAllBytes(ManagementAppMasterKeyRootFolder + "PublicKey.txt");
                     Byte[] MasterPublicKeyDigest = SodiumGenericHash.ComputeHash(64, MasterPublicKey);
-                    myTBArray[1].Text = Convert.ToBase64String(MasterPublicKeyDigest);
+                    FifthMAAppmyTBArray[1].Text = Convert.ToBase64String(MasterPublicKeyDigest);
                 }
                 else if (ComboBoxIndex == 1)
                 {
                     if (TORMainOperations.UsingTor == true)
                     {
-                        myTBArray[2].Text = await TORProxyFetchDigest(User_ID);
+                        FifthMAAppmyTBArray[2].Text = await TORProxyFetchDigest(User_ID);
                     }
                     else
                     {
@@ -1626,19 +1675,19 @@ public partial class MainView : UserControl
                                 readTask.Wait();
 
                                 var Result = readTask.Result;
-                                myTBArray[2].Text = Result.Substring(1, Result.Length - 2);
+                                FifthMAAppmyTBArray[2].Text = Result.Substring(1, Result.Length - 2);
                             }
                             else
                             {
-                                myTBArray[4].Text="There's something wrong on the server side..";
+                                FifthMAAppmyTBArray[4].Text="There's something wrong on the server side..";
                             }
                         }
                     }
                 }
                 else if (ComboBoxIndex == 2) 
                 {
-                    String SystemMasterPublicKeyDigest = myTBArray[1].Text;
-                    String ServerMasterPublicKeyDigest = myTBArray[2].Text;
+                    String SystemMasterPublicKeyDigest = FifthMAAppmyTBArray[1].Text;
+                    String ServerMasterPublicKeyDigest = FifthMAAppmyTBArray[2].Text;
                     if (SystemMasterPublicKeyDigest.CompareTo("") != 0 && ServerMasterPublicKeyDigest.CompareTo("") != 0)
                     {
                         //Not really that important if it's constant time compare
@@ -1647,22 +1696,22 @@ public partial class MainView : UserControl
                         Boolean Comparison = SystemMasterPublicKeyDigest.CompareTo(ServerMasterPublicKeyDigest) == 0;
                         if (Comparison == true)
                         {
-                            myTBArray[4].Text= "Both digest matched.. Yay..";
+                            FifthMAAppmyTBArray[4].Text= "Both digest matched.. Yay..";
                         }
                         else
                         {
-                            myTBArray[4].Text= "Please refer to the GUI for more information";
+                            FifthMAAppmyTBArray[4].Text= "Please refer to the GUI for more information";
                         }
                     }
                     else
                     {
-                        myTBArray[4].Text="If you don't fetch the digest from server and compute a digest locally, comparison operations couldn't be done";
+                        FifthMAAppmyTBArray[4].Text="If you don't fetch the digest from server and compute a digest locally, comparison operations couldn't be done";
                     }
                 }
             }
             else 
             {
-                myTBArray[4].Text = "You have not yet register an account";
+                FifthMAAppmyTBArray[4].Text = "You have not yet register an account";
             }
         }
         else if (ManagementAppUIChooser == 6)
@@ -1670,10 +1719,10 @@ public partial class MainView : UserControl
             if (File.Exists(ManagementAppUserRootFolder + "User_ID.txt") == true)
             {
                 String User_ID = File.ReadAllText(ManagementAppUserRootFolder + "User_ID.txt");
-                if (myTBArray[1].Text!=null && myTBArray[1].Text.CompareTo("") != 0)
+                if (SixthMAAppmyTBArray[1].Text!=null && SixthMAAppmyTBArray[1].Text.CompareTo("") != 0)
                 {
                     LoginModels myLoginModel = new LoginModels();
-                    myTBArray[0].Text = User_ID;
+                    SixthMAAppmyTBArray[0].Text = User_ID;
                     String URL = "";
                     Byte[] Signed_Challenge = new Byte[] { };
                     Byte[] Challenge = new Byte[] { };
@@ -1701,15 +1750,15 @@ public partial class MainView : UserControl
                     }
                     if (myRBArray[0].IsChecked == true)
                     {
-                        URL = "AddRemoveSubKeys?User_ID=" + User_ID + "&Key_Identifier=" + myTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge));
+                        URL = "AddRemoveSubKeys?User_ID=" + User_ID + "&Key_Identifier=" + SixthMAAppmyTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge));
                     }
                     else
                     {
-                        URL = "AddRemoveSubKeys/RemoveKeyIdentifier?User_ID=" + User_ID + "&Key_Identifier=" + myTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge));
+                        URL = "AddRemoveSubKeys/RemoveKeyIdentifier?User_ID=" + User_ID + "&Key_Identifier=" + SixthMAAppmyTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge));
                     }
                     if (TORMainOperations.UsingTor == true)
                     {
-                        myTBArray[2].Text = await TORProxyAddRemoveSubKeyIdentifiers(URL);
+                        SixthMAAppmyTBArray[2].Text = await TORProxyAddRemoveSubKeyIdentifiers(URL);
                     }
                     else
                     {
@@ -1729,23 +1778,23 @@ public partial class MainView : UserControl
 
                                 var Result = readTask.Result;
 
-                                myTBArray[2].Text = Result.Substring(1, Result.Length - 2);
+                                SixthMAAppmyTBArray[2].Text = Result.Substring(1, Result.Length - 2);
                             }
                             else
                             {
-                                myTBArray[2].Text = "There's something wrong on the server side..";
+                                SixthMAAppmyTBArray[2].Text = "There's something wrong on the server side..";
                             }
                         }
                     }
                 }
                 else
                 {
-                    myTBArray[2].Text = "Please enter a key identifier in the given text box";
+                    SixthMAAppmyTBArray[2].Text = "Please enter a key identifier in the given text box";
                 }
             }
             else 
             {
-                myTBArray[2].Text = "You have not yet register an account";
+                SixthMAAppmyTBArray[2].Text = "You have not yet register an account";
             }
         }
         else if (ManagementAppUIChooser == 7)
@@ -1753,10 +1802,10 @@ public partial class MainView : UserControl
             if (File.Exists(ManagementAppUserRootFolder + "User_ID.txt") == true)
             {
                 String User_ID = File.ReadAllText(ManagementAppUserRootFolder + "User_ID.txt");
-                if (myTBArray[1].Text!=null && myTBArray[1].Text.CompareTo("") != 0 && myTBArray[2].Text!=null && myTBArray[2].Text.CompareTo("") != 0 && myTBArray[3].Text!=null && myTBArray[3].Text.CompareTo("") != 0)
+                if (LastMAAppmyTBArray[1].Text!=null && LastMAAppmyTBArray[1].Text.CompareTo("") != 0 && LastMAAppmyTBArray[2].Text!=null && LastMAAppmyTBArray[2].Text.CompareTo("") != 0 && LastMAAppmyTBArray[3].Text!=null && LastMAAppmyTBArray[3].Text.CompareTo("") != 0)
                 {
                     LoginModels myLoginModel = new LoginModels();
-                    myTBArray[0].Text = User_ID;
+                    LastMAAppmyTBArray[0].Text = User_ID;
                     String URL = "";
                     Byte[] Signed_Challenge = new Byte[] { };
                     Byte[] Challenge = new Byte[] { };
@@ -1784,15 +1833,15 @@ public partial class MainView : UserControl
                     }
                     if (myRBArray[0].IsChecked == true)
                     {
-                        URL = "AddRemoveSubKeys/AddSubKey?User_ID=" + User_ID + "&Key_Identifier=" + myTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[3].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[2].Text);
+                        URL = "AddRemoveSubKeys/AddSubKey?User_ID=" + User_ID + "&Key_Identifier=" + LastMAAppmyTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(LastMAAppmyTBArray[3].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(LastMAAppmyTBArray[2].Text);
                     }
                     else
                     {
-                        URL = "AddRemoveSubKeys/ChangeSubKey?User_ID=" + User_ID + "&Key_Identifier=" + myTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[3].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[2].Text);
+                        URL = "AddRemoveSubKeys/ChangeSubKey?User_ID=" + User_ID + "&Key_Identifier=" + LastMAAppmyTBArray[1].Text + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(LastMAAppmyTBArray[3].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(LastMAAppmyTBArray[2].Text);
                     }
                     if (TORMainOperations.UsingTor == true)
                     {
-                        myTBArray[4].Text = await TORProxyAddChangeSubKey(URL);
+                        LastMAAppmyTBArray[4].Text = await TORProxyAddChangeSubKey(URL);
                     }
                     else
                     {
@@ -1812,23 +1861,23 @@ public partial class MainView : UserControl
 
                                 var Result = readTask.Result;
 
-                                myTBArray[4].Text = Result.Substring(1, Result.Length - 2);
+                                LastMAAppmyTBArray[4].Text = Result.Substring(1, Result.Length - 2);
                             }
                             else
                             {
-                                myTBArray[4].Text = "There's something wrong on the server side..";
+                                LastMAAppmyTBArray[4].Text = "There's something wrong on the server side..";
                             }
                         }
                     }
                 }
                 else
                 {
-                    myTBArray[4].Text = "Please enter data in the given text boxes";
+                    LastMAAppmyTBArray[4].Text = "Please enter data in the given text boxes";
                 }
             }
             else 
             {
-                myTBArray[4].Text = "You have not yet register an account";
+                LastMAAppmyTBArray[4].Text = "You have not yet register an account";
             }
         }
     }
@@ -1877,7 +1926,7 @@ public partial class MainView : UserControl
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = await client.GetAsync("ChangeKey?User_ID=" + User_ID + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[2].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(myTBArray[1].Text));
+            var response = await client.GetAsync("ChangeKey?User_ID=" + User_ID + "&URLEncoded_Signed_Challenge=" + System.Web.HttpUtility.UrlEncode(Convert.ToBase64String(UserSignedChallenge)) + "&URLEncoded_Signed_PK=" + System.Web.HttpUtility.UrlEncode(FourthMAAppmyTBArray[2].Text) + "&URLEncoded_PK=" + System.Web.HttpUtility.UrlEncode(FourthMAAppmyTBArray[1].Text));
             if (response.IsSuccessStatusCode)
             {
                 var readTask = response.Content.ReadAsStringAsync();
