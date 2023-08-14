@@ -1,3 +1,6 @@
+# Problem statement
+For details, kindly refer to the problem statement file.
+
 # PKDSA
 This repository will be storing the code required in allowing public key authentication.
 
