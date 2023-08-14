@@ -1,5 +1,5 @@
 # Problem statement
-For details, kindly refer to the problem statement file.
+For details, [click here.](https://github.com/Chewhern/PKDSA/blob/main/Problem_Statement.md)
 
 # PKDSA
 This repository will be storing the code required in allowing public key authentication.
