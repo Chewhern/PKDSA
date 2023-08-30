@@ -9,6 +9,8 @@ AvaloniaUI uses **Skia** an open source project which uses permissive license su
 
 **Now it should have no issues.. And it should work properly but please do note I just address on the bugs.. I hope they're gone**
 
+**AvaloniaUI by default uses dotnet 6.0 but for some reasons, the project that I created was using dotnet 7.0. If you want to change to dotnet 6.0 kindly changes them in the csproj of both PKDSA_ClientApp and PKDSA_ClientApp.Desktop as Microsoft's dotnet 7.0 have a shorter timespan compare to dotnet 6.0**
+
 ## Linux
 1. Debian 9 (Stretch)+
 2. Ubuntu 16.04+
