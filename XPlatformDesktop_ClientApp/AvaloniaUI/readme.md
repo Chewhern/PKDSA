@@ -63,3 +63,10 @@ pacman -S dotnet-runtime-7.0
 2. Open command prompt(Windows) or Terminal/Console(Linux/MacOS) then navigate to the unzipped applications.
 3. Do **dotnet PKDSA_ClientApp.Desktop.dll**
 4. A GUI applications should come out.
+
+## 0.0.2
+1. Added support for provider's own **local support without reliance on out of band** such as email, phone number, Session Messenger User's ID. (Need to pair with Command Line Tool)
+2. Users can request for support by either using out of band communication or local support without reliance on out of band via sign up's generated out of band digital signature keypair. (Need to pair with Out Of Band Application created by the author)
+3. Removed the Session Messenger user ID's account binding.
+4. Added support for AvaloniaUI template with author's self integration of PKDSA safe features.
+5. Same like 0.0.1. 
