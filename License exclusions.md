@@ -16,10 +16,6 @@ The reason I put there was to have a blank API endpoint to check if the server w
 ## Register Account (Controller)
 
 ### Identity binding
-If you guys don't want to use Session messenger user ID as a way to communicate with the supposedly rightful owner of the public keys, you can use something like
-Discord's user ID, emails and phone numbers. In the case you stay default, which is Session messenger user ID, you can wait for me to come up with some tools to
-verify the owner behind the ID.
-
 If you modify it to use emails/phone numbers then you might need to come up with some ways to verify with the supposedly rightful owner of the public keys. However,
 in either of one of these mechanisms, the change of the registered master key of the client needs to be done either manually or in a semi-automatic way.
 
