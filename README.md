@@ -8,6 +8,8 @@ In [here](https://github.com/Chewhern/PKDSA/tree/main/XPlatformDesktop_ClientApp
 
 As long as it's anything other than the stated files/repository here, they are all considered as AGPL licensed.
 
+**I will find some time to update some minor codes in the server side and there will be a rework on license requirements & exclusions.**
+
 # PKDSA
 This repository will be storing the code required in allowing public key authentication.
 
