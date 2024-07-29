@@ -4,7 +4,7 @@ For details, [click here.](https://github.com/Chewhern/PKDSA/blob/main/Problem_S
 # Licenses
 To avoid confusions, anything within [web consumptions](https://github.com/Chewhern/PKDSA/tree/main/Web%20consumption) will be considered as using MIT/ISC/Unlicensed open source licenses.
 
-In [here](https://github.com/Chewhern/PKDSA/tree/main/XPlatformDesktop_ClientApp/AvaloniaUI/version%200.0.2), the template zip file and its content was considered as MIT/ISC/Unlicensed open source licenses.
+In [here](https://github.com/Chewhern/PKDSA/tree/main/XPlatformDesktop_ClientApp/AvaloniaUI/), the template zip file and its content was considered as MIT/ISC/Unlicensed open source licenses.
 
 As long as it's anything other than the stated files/repository here, they are all considered as AGPL licensed.
 
