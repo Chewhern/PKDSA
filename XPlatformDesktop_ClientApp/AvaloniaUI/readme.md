@@ -71,5 +71,6 @@ pacman -S dotnet-runtime-7.0
 4. Added support for AvaloniaUI template with author's self integration of PKDSA safe features. **Kindly check the template source code.**
 5. Same like 0.0.1. 
 
-### Template's License
-The template named **PKDSA_CA_Template** will be using MIT/ISC as license.
+## 0.0.3
+1. Removed **GetLostChallenge** in both template and the application.
+2. Solved some bugs in the application. 
