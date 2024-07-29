@@ -8,7 +8,11 @@ In [here](https://github.com/Chewhern/PKDSA/tree/main/XPlatformDesktop_ClientApp
 
 As long as it's anything other than the stated files/repository here, they are all considered as AGPL licensed.
 
-**I will find some time to update some minor codes in the server side and there will be a rework on license requirements & exclusions.**
+There're certain requirements that one must follow [here](https://github.com/Chewhern/PKDSA/blob/main/License%20Requirements.md).
+
+There're several exclusions that the author permits. For details, refer [here](https://github.com/Chewhern/PKDSA/blob/main/License%20exclusions.md).
+
+In AGPL/GPL license, there's modification or derivate work concerns. For details on what's allowed and what's not allowed, refer [here](https://github.com/Chewhern/PKDSA/blob/main/Modified_Work.md).
 
 # PKDSA
 This repository will be storing the code required in allowing public key authentication.
@@ -22,43 +26,29 @@ This application uses **web of trust** instead of **trust model** in **PKI**.
 **PKI at its simplest form, is 3 parties mutually verifying with each other to ensure there's no MITM, this is also consider as a web of trust. However with such assumption, PKI can't be fully implemented and our current digital world may be flawed.**
 
 # Important notice
-Since there're 3 applications here, there's client(2 applications type) and server application. The server application was hosted on a **pure unmanaged Ubuntu VPS**.
+Since there're 3 applications here, there's client and server application. The server application was hosted on a **pure unmanaged Ubuntu VPS**.
 
-**Since AvaloniaUI works, Management Applications and Signing Applications have been combined into AvaloniaUI project. You can look at it via "XPlatformDesktopClientApp/AvaloniaUI"**
-
-**Future applications will be all under XPlatform_*,since it needs to support other desktop OS(s). For mobile applications, I will think how to support on Android
-and IOS. I wish can support other custom rom of mobile phone OS but it's a completely new area for me and that might need other contributors helps.**
-
-**Management Application and Signing Application will now act as a draft before the existence XPlatform_*, those will still be used but a better version will be cross platform applications.**
+**AvaloniaUI was used to create a better version (support multiple desktop OS) of deleted management and signing application which was previously coded and made only for Windows**
 
 **All of the components here are from open source with exceptions of IDE such as Visual Studio.**
 
-**The flow and logic behind "5." in Management Application is now being demonstrated by using ASP.Net Core (6) Razor pages..**
+**The flow and logic on how it can be integrated on website has been demonstrated under web consumption.**
 
 **When you're using TOR within this full stack application, try to ensure your CPU was freed, TOR won't crash or the application won't crash as long as your CPU
 which shown in task manager(Windows) are not more than 25%.**
 
 # IP Address(temporary)
 
-Currently the first version of the PKDSA is hosted under the IP address of
-**https://chronops.xyz:5001/api/**
+**https://zeroaccesssecuritysolutions.com:5001/api/**
 
 # ChangeLog
 For detailed changelog, kindly refer to the following for the time being.
 
-## Management Application (Windows Desktop)
-[here](https://github.com/Chewhern/PKDSA/tree/main/Management_Applications/Community/Windows/PKDSA_UMWinClient)
-
 ## Server Application (Unmanaged Ubuntu VPS)
 [here](https://github.com/Chewhern/PKDSA/tree/main/Server_Application/Community/Ubuntu)
 
-## Signing Application (Windows Desktop)
-There's no changelog here.
-
 ## Cross Platform Desktop Application 
 [here](https://github.com/Chewhern/PKDSA/tree/main/XPlatformDesktop_ClientApp/AvaloniaUI)
-
-The prerequisites to get a full and detailed picture to the features is to understand it first on Management Application and Server Application.
 
 # Guides
 
@@ -76,5 +66,5 @@ For the time being, you may not understand anything that I have written.
 
 #### Purposes
 1. Allowing public to understand how public key authentication could be done on website or devices.
-2. Allowing MySQL and PHPMyadmin developers to understand the logic behind public key authentication so that they could implement it into MySQL and PHPMyAdmin(Uncertain).
-3. Serve as a platform/framework for passwordless authentication.
+2. Serve as a platform/framework for passwordless authentication.
+3. Provide a privacy-centric identity framework that one can use without the reliance on identity with an assumption that out of band key pair was kept securely and privately. 
