@@ -1,3 +1,8 @@
-When you are using any of my components, please do put a link back to this project on your closed source software/systems.
+When you use any of my components, as long as they're not MIT/ISC licensed, you must comply with the following requirements.
 
-I would want to have some credits towards the work I done.
+
+1. To any receivers of my compiled project or source code, you must put a label or credit which links to this repository anywhere inside your project.
+
+Or
+
+2. If my repository or my GitHub account went missing, the whole repository need to be downloaded, distributed and credit by having my email (it_chew@protonmail.com) as a label inside your project. 
