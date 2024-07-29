@@ -18,3 +18,6 @@ master public key digest.
 Key Pair A (Offline from both the provider and Client) -> Key Pair B (Main) -> Key Pair Cs (Sub)
 
 Key Pair A and B only able to have 1 key pair for each anonymous users. 
+
+# Version 0.0.5
+- All challenge classes' two methods have been merged into one (Last version will cause some issues if **RequestChallenge** method was called repeatedly or **GetLostChallenge** was called before **RequestChallenge** was called. 
